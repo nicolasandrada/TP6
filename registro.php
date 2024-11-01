@@ -6,9 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Grindder</h1>
-
-    <form action="guardar.php" method="post">
+    <form action="guardar.php" method="post" enctype="multipart/form-data">
         nombre
         <input type="text" name="nombre" id=""> <br>
         contraseña
