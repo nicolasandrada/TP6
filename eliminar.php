@@ -23,7 +23,7 @@
 
     $con->close();
 
-    // Redirecciona de vuelta a registro.php
+    // Redirecciona de vuelta a eliminar.php
     header("Location: mostrar1.php");
     exit;
 ?>
