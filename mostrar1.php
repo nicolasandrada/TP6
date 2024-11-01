@@ -13,6 +13,7 @@ if ( $resultado->num_rows > 0 ) {
             <th>Nombre</th>
             <th>Edad</th>
             <th>Foto</th>
+               <th>Eliminar</th>
         </tr>";
     while ($row = mysqli_fetch_array($resultado)) {
         echo "  <tr>
@@ -21,6 +22,9 @@ if ( $resultado->num_rows > 0 ) {
                     <td> $row[fecha_nacimiento]</th>
                     <td>
                         <img width='100' src='fotos/$row[foto]'>
+                    </td>
+                    <td>
+                        <a href='eliminar.php?id=$row[id]'>Eliminar</a>
                     </td>
                 </tr>";
         }

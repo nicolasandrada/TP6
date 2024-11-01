@@ -2,13 +2,13 @@
     include "conexion.php";
 
     // Verifica si se ha recibido el nombre
-    if (isset($_POST['nombre'])) {
-        $nombre = $_POST['nombre'];
+    if (isset($_REQUEST['id'])) {
+        $id = $_REQUEST['id'];
 
         // Elimina el registro con el nombre proporcionado
-        $SQL = "DELETE FROM Usuarios WHERE nombre = ?";
+        $SQL = "DELETE FROM usuario WHERE id = ?";
         $stmt = $con->prepare($SQL);
-        $stmt->bind_param("s", $nombre);
+        $stmt->bind_param("i", $id);
 
         if ($stmt->execute()) {
             echo "Registro eliminado correctamente.";
@@ -24,6 +24,6 @@
     $con->close();
 
     // Redirecciona de vuelta a registro.php
-    header("Location: registro.php");
+    header("Location: mostrar1.php");
     exit;
 ?>
